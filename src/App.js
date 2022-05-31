@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Switch, Redirect, Route } from "react-router-dom";
 
-function App() {
+//Contexts
+import ProductContextProvider from "./contexts/ProductContextProvider";
+import CardContextProvider from "./contexts/CartContextProvider";
+
+//Components
+import Navbar from "./components/Navbar";
+import Products from "./components/Products";
+import ShopCart from "./components/ShopCart";
+import Register from "./components/Register";
+import Login from "./components/Login";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <CardContextProvider>
+        <ProductContextProvider>
+          <Navbar />
+          <Switch>
+            <Route path="/login" component={Login} />
+            <Route path="/register" component={Register} />
+            <Route path="/cart" component={ShopCart} />
+            <Route path="/products" component={Products} />
+            <Redirect from="/*" to="/products" />
+          </Switch>
+        </ProductContextProvider>
+      </CardContextProvider>
     </div>
   );
-}
+};
 
 export default App;

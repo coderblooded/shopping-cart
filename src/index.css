@@ -1,13 +1,73 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+    margin:0;
+    padding:0;
+    font-family:byekan-;
+    direction:rtl;
+}
+@font-face {
+    font-family: byekan;
+    src: url("./assets/byekan.ttf");
+}
+@font-face {
+    font-family: byekan-;
+    src: url("./assets/byekan-.ttf");
+}
+@font-face {
+    font-family: yekan;
+    src: url("./assets/yekan.ttf");
+}
+@font-face {
+    font-family: iransans;
+    src: url("./assets/iransans.ttf");
+}
+@font-face {
+    font-family: iransans2;
+    src: url("./assets/iransans2.ttf");
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+    font-family: fab;
+    src: url("./assets/font-awesome/fa-solid-900.ttf");
+}
+@font-face {
+    font-family: fad;
+    src: url("./assets/font-awesome/fa-duotone-900.ttf");
+}
+@font-face {
+    font-family: fad;
+    src: url("./assets/font-awesome/fa-duotone-900.ttf");
+}
+@font-face {
+    font-family: fal;
+    src: url("./assets/font-awesome/fa-light-300.ttf");
+}
+@font-face {
+    font-family: far;
+    src: url("./assets/font-awesome/fa-regular-400.ttf");
+}
+@font-face {
+    font-family: fas;
+    src: url("./assets/font-awesome/fa-solid-900.ttf");
+}
+@font-face {
+    font-family: fat;
+    src: url("./assets/font-awesome/fa-thin-100.ttf");
+}
+.fab {
+    font-family: fab;
+}
+.fad {
+    font-family: fad;
+}
+.fal {
+    font-family: fal;
+}
+.far {
+    font-family: far;
+}
+.fas {
+    font-family: fas;
+}
+.fat {
+    font-family: fat;
 }
