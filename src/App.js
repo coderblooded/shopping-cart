@@ -1,9 +1,6 @@
 import React from "react";
 import { Switch, Redirect, Route } from "react-router-dom";
-
-//Contexts
-import ProductContextProvider from "./contexts/ProductContextProvider";
-import CardContextProvider from "./contexts/CartContextProvider";
+import { Provider } from "react-redux";
 
 //Components
 import Navbar from "./components/Navbar";
@@ -12,21 +9,22 @@ import ShopCart from "./components/ShopCart";
 import Register from "./components/Register";
 import Login from "./components/Login";
 
+//Redux
+import store from "./redux/store";
+
 const App = () => {
   return (
     <div>
-      <CardContextProvider>
-        <ProductContextProvider>
-          <Navbar />
-          <Switch>
-            <Route path="/login" component={Login} />
-            <Route path="/register" component={Register} />
-            <Route path="/cart" component={ShopCart} />
-            <Route path="/products" component={Products} />
-            <Redirect from="/*" to="/products" />
-          </Switch>
-        </ProductContextProvider>
-      </CardContextProvider>
+      <Provider store={store}>
+        <Navbar />
+        <Switch>
+          <Route path="/login" component={Login} />
+          <Route path="/register" component={Register} />
+          <Route path="/cart" component={ShopCart} />
+          <Route path="/products" component={Products} />
+          <Redirect from="/*" to="/products" />
+        </Switch>
+      </Provider>
     </div>
   );
 };

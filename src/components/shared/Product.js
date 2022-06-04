@@ -1,15 +1,10 @@
-import React, { useContext } from "react";
-import {
-  splitTitle,
-  isIncart,
-  quantityCount,
-  isInCart,
-} from "../../helper/functions";
-import { CartContext } from "../../contexts/CartContextProvider";
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { splitTitle, quantityCount, isInCart } from "../../helper/functions";
 
 const Product = ({ productData }) => {
-  const { state, dispatch } = useContext(CartContext);
-
+  const dispatch = useDispatch();
+  const state = useSelector((state) => state.cartState);
   return (
     <div className="p-4">
       <div className="shadow-lg rounded flex justify-center items-center py-6">
@@ -56,9 +51,9 @@ const Product = ({ productData }) => {
               onClick={() =>
                 dispatch({ type: "REMOVE_ITEM", payload: productData })
               }
-              className="border-2 border-gray-300 py-1 px-3 mt-2 rounded hover:bg-gray-300 border-opacity-80 duration-300"
+              className="border-2 border-gray-300 py-1 px-2.5 mt-2 mr-1 rounded hover:bg-gray-300 border-opacity-80 duration-300"
             >
-              <i className="fal fa-trash"></i>
+              <i className="fal fa-trash text-sm"></i>
             </button>
           )}
         </div>

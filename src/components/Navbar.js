@@ -1,11 +1,11 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../images/logo.png";
-import { CartContext } from "../contexts/CartContextProvider";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
   const [isShowMenu, setIsShowMenu] = useState(false);
-  const { state } = useContext(CartContext);
+  const state = useSelector((state) => state.cartState);
   return (
     <div>
       <div id="navbar" className="relative bg-green-600 h-16 flex items-center">

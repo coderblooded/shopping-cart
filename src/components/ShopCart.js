@@ -1,19 +1,17 @@
-import React, { useContext } from "react";
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-
-//Context
-import { CartContext } from "../contexts/CartContextProvider";
 
 //Components
 import Card from "./shared/Card";
 
 const ShopCart = () => {
-  const { state, dispatch } = useContext(CartContext);
-  console.log(state);
+  const state = useSelector((state) => state.cartState);
+  const dispatch = useDispatch();
 
   return (
-    <div class="mt-12 flex justify-center w-100">
-      <table className="table-auto lg:w-6/12 w-10/12 lg:ml-5 lg:mx-0 mx-auto">
+    <div className="mt-12 flex lg:flex-row items-start flex-col justify-center w-100">
+      <table className="table-auto lg:w-6/12 w-11/12 lg:ml-5 lg:mx-0 mx-auto">
         <thead className="border-b-2 border-gray-200 border-opacity-85">
           <tr>
             <td className="p-4">محصول</td>
@@ -24,7 +22,7 @@ const ShopCart = () => {
         </thead>
         <tbody>
           {state.selectedItems.map((item) => (
-            <tr className="">
+            <tr>
               <Card key={item.id} productData={item} />
             </tr>
           ))}
@@ -32,7 +30,7 @@ const ShopCart = () => {
       </table>
 
       {state.itemsCounter > 0 && (
-        <div className="border-2 border-green-200 border-opacity-85 py-8 px-5 lg:w-96 lg:mx-0 lg:mt-0 w-10/12 mt-12 mx-auto rounded">
+        <div className="border-2 border-green-200 border-opacity-85 py-8 px-5 lg:w-96 lg:mx-0 lg:mt-0 w-11/12 mt-12 mx-auto rounded">
           <h2 className="text-2xl">جمع کل سبد خرید</h2>
           <div className="mt-4">
             <div className="flex justify-between border-b-2 border-gray-200 pb-2">

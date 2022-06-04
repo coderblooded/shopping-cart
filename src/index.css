@@ -5,24 +5,8 @@
     direction:rtl;
 }
 @font-face {
-    font-family: byekan;
-    src: url("./assets/byekan.ttf");
-}
-@font-face {
     font-family: byekan-;
     src: url("./assets/byekan-.ttf");
-}
-@font-face {
-    font-family: yekan;
-    src: url("./assets/yekan.ttf");
-}
-@font-face {
-    font-family: iransans;
-    src: url("./assets/iransans.ttf");
-}
-@font-face {
-    font-family: iransans2;
-    src: url("./assets/iransans2.ttf");
 }
 
 @font-face {
