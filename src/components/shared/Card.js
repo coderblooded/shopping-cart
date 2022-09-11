@@ -41,7 +41,7 @@ const Card = ({ productData }) => {
         )}
       </td>
       <td className="sm:p-0 p-4">
-        <span>{price * quantity}</span>
+        <span>{(price * quantity).toFixed(2)}</span>
       </td>
     </>
   );

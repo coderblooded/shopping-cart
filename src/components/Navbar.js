@@ -52,7 +52,7 @@ const Navbar = () => {
               <i className="fal fa-shopping-bag text-xl"></i>
               <span
                 id="count"
-                className="absolute top-0 transform -translate-x-3.5 bg-white rounded-full text-green-500 w-3.5 h-3.5 flex items-center justify-center text-sm"
+                className="absolute top-0 transform sm:-translate-x-3.5 -translate-x-4 -translate-y-1 bg-white rounded-full text-green-500 w-5 sm:w-3.5 h-5 sm:h-3.5 flex items-center justify-center text-xs"
               >
                 {state.itemsCounter}
               </span>
