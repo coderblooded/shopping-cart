@@ -1,12 +1,36 @@
 *{
     margin:0;
     padding:0;
-    font-family:byekan-;
-    direction:rtl;
+    font-family:helvetica;
 }
 @font-face {
-    font-family: byekan-;
-    src: url("./assets/byekan-.ttf");
+    font-family: helvetica;
+    src: url("./assets/Helvetica.otf");
+}
+.helvetica {
+    font-family: helvetica;
+}
+@font-face {
+    font-family:helvetica-black ;
+    src: url("./assets/Helvetica-Black.otf");
+}
+.helveticaBlack{
+    font-family:helvetica-black ;
+}
+@font-face {
+    font-family: helvetica-bold;
+    src: url("./assets/Helvetica-Bold.otf");
+}
+
+.helveticaBold{
+    font-family: helvetica-bold;
+}
+@font-face {
+    font-family: helvetica-medium;
+    src: url("./assets/HelveticaBQ-Medium.otf");
+}
+.helveticaMedium{
+    font-family: helvetica-medium;
 }
 
 @font-face {

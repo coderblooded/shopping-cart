@@ -1,0 +1,32 @@
+.slider {
+    position: relative;
+    background-size: cover;
+    width: 100%;
+    height: calc(100vh + 100px);
+    background-position: 50% 97%;
+    background-repeat: no-repeat;
+    
+}
+
+.slider::before{
+  content:"";
+  background:rgba(0,0,0,.2);
+  position:absolute;
+  top: 0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  z-index:1
+}
+
+.sliderSearchBar{
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+input:focus{
+  outline: none !important;
+}
+
+@media (max-width:640px){
+  .searchBar1{display:none}
+  .searchBar2{display:block}
+}
