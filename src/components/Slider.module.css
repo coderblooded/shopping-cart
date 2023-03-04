@@ -2,10 +2,8 @@
     position: relative;
     background-size: cover;
     width: 100%;
-    height: calc(100vh + 100px);
     background-position: 50% 97%;
     background-repeat: no-repeat;
-    
 }
 
 .slider::before{
@@ -24,6 +22,12 @@
 }
 input:focus{
   outline: none !important;
+}
+
+@media (min-width:1280px){
+  .slider{
+    height:740px;
+  }
 }
 
 @media (max-width:640px){

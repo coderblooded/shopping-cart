@@ -6,7 +6,7 @@ const Products = ({ loading, products }) => {
   return (
     <div
       id="products"
-      className="container grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-12 mt-12 sm:mx-auto mx-3"
+      className="container grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-12 mt-12 sm:mx-auto p-4"
     >
       {loading ? (
         <Loader />

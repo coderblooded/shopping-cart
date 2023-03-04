@@ -70,7 +70,8 @@ const Slider = () => {
 
       <div
         id="slider-search-bar"
-        className={`${styles.sliderSearchBar} bottom-8 flex items-center md:justify-between justify-center sm:mt-24 mt-20 bg-white rounded-full relative lg:w-3/5 md:w-4/5 sm:w-11/12 sm:py-4 py-1 z-10 w-80 mx-auto`}
+        className={`${styles.sliderSearchBar} bottom-8 flex items-center md:justify-between justify-center sm:mt-24 mt-20 bg-white rounded-full relative lg:w-3/5 md:w-4/5 sm:w-11/12 sm:py-4 z-10 w-72 mx-auto
+        `}
       >
         <div className="w-full flex">
           <i className="fas fa-magnifying-glass text-green-500 ml-5"></i>
@@ -87,7 +88,7 @@ const Slider = () => {
         </div>
         <button
           style={{ boxShadow: "rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px" }}
-          className="hover:bg-green-600 duration-300 bg-green-400 text-white rounded-full sm:px-12 px-8 py-2 md:mr-7 mr-1"
+          className="hover:bg-green-600 duration-300 bg-green-400 text-white rounded-full sm:px-12 px-8 py-2 md:mr-7"
         >
           Search
         </button>
